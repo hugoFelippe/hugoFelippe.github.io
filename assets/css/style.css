@@ -1,0 +1,96 @@
+.hidden {
+    display: none !important;
+}
+html {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+body header {
+    position: fixed;
+}
+body#home article {
+    margin: 0;
+}
+body#home aside.sidebar {
+    padding: 0;
+}
+body#home aside.sidebar section.picture img {
+    max-width: 100%;
+    display: block;
+}
+body#home aside.sidebar section.contact ul {
+    margin: 0;
+}
+body#home aside.sidebar section.contact ul li a {
+    padding:  15px;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    display: block;
+}
+body#home aside.sidebar section.contact ul li a:hover {
+    background-color: #ffffff !important;
+    padding: 20px 15px;
+}
+
+body#home aside.sidebar section.contact ul li.indigo {
+    background: linear-gradient(65deg, #3f51b5, #1a237e);
+}
+body#home aside.sidebar section.contact ul li.indigo a:hover p {
+    color: #283593;    
+}
+body#home aside.sidebar section.contact ul li.cyan {
+    background: linear-gradient(65deg, #00bcd4, #006064);
+}
+body#home aside.sidebar section.contact ul li.cyan a:hover p {
+    color: #00838f;
+}
+body#home aside.sidebar section.contact ul li.lime {
+    background: linear-gradient(65deg, #cddc39, #827717);
+}
+body#home aside.sidebar section.contact ul li.lime a:hover p {
+    color: #9e9d24;
+}
+body#home aside.sidebar section.contact ul li.amber {
+    background: linear-gradient(65deg, #ffc107, #ff6f00);
+}
+body#home aside.sidebar section.contact ul li.amber a:hover p {
+    color: #ff8f00;
+}
+body#home aside.sidebar section.contact ul li p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    color: #ffffff;
+}
+body#home aside.sidebar section.contact ul li img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 2rem;
+}
+body#home aside.sidebar section.skills h3 {
+    margin: 0;
+    font-size: xx-large;
+    text-align: center;
+    padding: 20px 0;
+}
+body#home aside.sidebar section.skills hr {
+    width: 10%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: #ff8f00;
+    border: none;
+    transition: all 0.3s;
+}
+body#home aside.sidebar section.skills:hover hr {
+    width: 40%;
+}
+body#home aside.sidebar section.skills td {
+    padding: 15px 10px;
+}
+body#home aside.sidebar section.skills td img {
+    display: inline-block;
+    height: 23px;
+    vertical-align: middle;
+    width: 23px;
+    margin: 0 !important;
+    float: right;
+}
