@@ -1,0 +1,17 @@
+{
+    "liveServer.settings.useLocalIp": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/assets/css"
+        }
+    ],
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.includeItems": [ "/assets/css/sass/core/core.scss" ],
+    "liveSassCompile.settings.excludeList": [ "/assets/css/sass/**" ],
+    "liveSassCompile.settings.autoprefix": [
+        "> 0.05%",
+        "last 4 versions"
+    ]
+}
