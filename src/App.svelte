@@ -1,11 +1,11 @@
 <script>
-	export let name;
+    import { Router, Route } from 'svero';
+    
+    import Index from './pages/Index.svelte';
+
 </script>
 
-<style>
-	h1 {
-		color: purple;
-	}
-</style>
-
-<h1>Hello {name}!</h1>
+<Router>
+    <Route fallback path="*"><h1>Not found</h1></Route>
+    <Route exact path="/" component={Index} />
+</Router>

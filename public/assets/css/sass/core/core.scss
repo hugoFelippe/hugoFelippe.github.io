@@ -6,11 +6,11 @@
 /* Libs */
 @import "../materialize/materialize.scss";
 
+
 $background-gradient-indigo: linear-gradient(65deg, color("indigo", "base"), color("indigo", "darken-4"));
 $background-gradient-cyan: linear-gradient(65deg, color("cyan", "base"), color("cyan", "darken-4"));
 $background-gradient-lime: linear-gradient(65deg, color("lime", "base"), color("lime", "darken-4"));
 $background-gradient-amber: linear-gradient(65deg, color("amber", "base"), color("amber", "darken-4"));
-
 
 html {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -82,8 +82,10 @@ html {
             }
         }
 
-        &#home {
-            article {
+        main#home {
+            margin: 0px;
+            
+            section.content {
                 z-index: 1;
                 margin: 0;
 

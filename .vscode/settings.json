@@ -4,7 +4,7 @@
         {
             "format": "compressed",
             "extensionName": ".min.css",
-            "savePath": "/public/bundle"
+            "savePath": "/public/assets/css"
         }
     ],
     "liveSassCompile.settings.generateMap": true,
@@ -13,5 +13,12 @@
     "liveSassCompile.settings.autoprefix": [
         "> 0.01%",
         "last 4 versions"
+    ],
+    "breadcrumbs.enabled": true,
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.rulers": [
+        80,
+        120
     ]
 }
