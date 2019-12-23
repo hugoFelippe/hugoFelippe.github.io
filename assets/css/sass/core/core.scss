@@ -1,348 +1,289 @@
 @charset "UTF-8";
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap');
-
 /* Libs */
 @import "../materialize/materialize.scss";
 
-
-$background-gradient-indigo: linear-gradient(65deg, color("indigo", "base"), color("indigo", "darken-4"));
-$background-gradient-cyan: linear-gradient(65deg, color("cyan", "base"), color("cyan", "darken-4"));
-$background-gradient-lime: linear-gradient(65deg, color("lime", "base"), color("lime", "darken-4"));
-$background-gradient-amber: linear-gradient(65deg, color("amber", "base"), color("amber", "darken-4"));
+.hidden {
+    display: none !important;
+}
 
 html {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    box-sizing: border-box;
-
-    body {
-        header {
-            top: 0;
-            width: 69.75px;
-            height: 95px;
-            overflow: hidden;
-            position: fixed;
-            padding: 20px 20px 20px 20px;
-            margin: 25px 25px;
-            background-color: #fff;
-            transition: all .25s;
-            z-index: 2;
-
-            img.logo {
-                height: 55px;
-                float: left;
-            }
-            
-            ul {
-                padding-left: 15px !important;
-                margin: 0;
-
-                li {
-                    margin: 0;
-                    float: left;
-
-                    a {
-                        height: 55px;
-                        display: block;
-                        padding: 0 15px;
-                        line-height: 55px;
-                        font-size: 1.1rem;
-                        font-weight: bold;
-                        color: color("blue-grey", "base");
-
-                        &.home:hover,
-                        &.active.home {
-                            color: color("indigo", "darken-2") !important;
-                        }
-                        
-                        &.sobre:hover,
-                        &.active.sobre {
-                            color: color("cyan", "darken-2") !important;
-                        }
-                        
-                        &.contato:hover,
-                        &.active.contato {
-                            color: color("lime", "darken-2") !important;
-                        }
-                        
-                        &.trabalhos:hover,
-                        &.active.trabalhos {
-                            color: color("amber", "darken-2") !important;
-                        }
-
-                        &:hover {
-                        }
-                    }
-                }
-            }
-            
-            &:hover {
-                width: 510px;
-            }
-        }
-
-        main#home {
-            margin: 0px;
-            
-            section.content {
-                z-index: 1;
-                margin: 0;
-
-                section.info {
-                    h1 {
-                        margin: 30px 30px 0 0;
-                        text-align: right;
-                        font-size: 3rem;
-                        font-weight: 500;
-                        color: color("amber", "base");
-                    }
-
-                    p.role {
-                        text-align: right;
-                        padding-right: 30px;
-                        font-size: 1.5rem;
-                        color: color("cyan", "base");
-                        margin: 10px 0 0;
-                    }
-                    
-                    blockquote {
-                        border: none;
-                        padding: 0 60px 0 0;
-                        text-align: right;
-                        font-style: italic;
-                        margin: 40px 0;
-                    }
-                    
-                    strong {
-                        display: block;
-                        text-align: right;
-                        font-style: normal;
-                        color: color("indigo", "darken-3");
-                        margin-top: 10px;
-                    }
-                    
-                    p.resume {
-                        text-align: right;
-                        padding: 0 30px 0 200px;
-                        font-size: 1.2rem;
-                    }
-                }
-                
-                section.academic {
-                    h3 {
-                        padding: 0 0 0 30px;
-                        color: color("lime", "darken-4");
-                    }
-
-                    hr {
-                        border: none;
-                        height: 5px;
-                        border-radius: 62px;
-                        width: 120px;
-                        position: relative;
-                        margin: 0 0 0 30px;
-                    }
-
-                    div {
-                        padding: 20px 0 20px 30px;
-                    }
-                }
-
-                section.exp {
-                    h3 {
-                        text-align: right;
-                        padding: 0 30px 0 0;
-                        color: color("lime", "darken-4");
-                    }
-
-                    hr {
-                        border: none;
-                        height: 5px;
-                        border-radius: 62px;
-                        width: 120px;
-                        position: relative;
-                        margin: 0 50px 0 calc(100% - 170px);
-                    }
-                    
-                    div {
-                        text-align: right;
-                        padding: 20px 50px 20px 0;
-                    }
-                }
-                
-                section.exp div h5,
-                section.exp div p.role,
-                section.academic div h5,
-                section.academic div p.role {
-                    margin: 0;
-                }
-
-                section {
-                    hr.indigo {
-                        background: $background-gradient-indigo;
-                    }
-
-                    hr.cyan {
-                        background: $background-gradient-cyan;
-                    }
-
-                    hr.lime {
-                        background: $background-gradient-lime;
-                    }
-
-                    hr.amber {
-                        background: $background-gradient-amber;
-                    }
-                }
-            }
-            
-            aside.sidebar {
-                padding: 0;
-
-                section.picture img {
-                    max-width: 100%;
-                    display: block;
-                }
-                
-                section.contact {
-                    ul {
-                        margin: 0;
-
-                        li {
-                            a {
-                                padding: 15px;
-                                font-size: 1.2rem;
-                                transition: all 0.3s;
-                                display: block;
-
-                                &:hover {
-                                    background-color: #ffffff !important;
-                                    padding: 20px 15px;
-                                }
-                            }
-
-                            p {
-                                display: inline-block;
-                                vertical-align: middle;
-                                margin: 0;
-                                color: #ffffff;
-                            }
-
-                            img {
-                                display: inline-block;
-                                vertical-align: middle;
-                                height: 2rem;
-                            }
-
-                            &.indigo {
-                                background: $background-gradient-indigo;
-
-                                a:hover p {
-                                    color: color("indigo", "darken-3");
-                                }
-                            }
-        
-                            &.cyan {
-                                background: $background-gradient-cyan;
-
-                                a:hover p {
-                                    color: color("cyan", "darken-3");
-                                }
-                            }
-        
-                            &.lime {
-                                background: $background-gradient-lime;
-
-                                a:hover p {
-                                    color: color("lime", "darken-3");
-                                }
-                            }
-        
-                            &.amber {
-                                background: $background-gradient-amber;
-
-                                a:hover p {
-                                    color: color("amber", "darken-3");
-                                }
-                            }
-                        }
-                    }
-                }
-
-                section.skills {
-                    max-height: 347px;
-                    overflow: hidden;
-                    position: relative;
-                    transition: all 0.5s;
-
-                    a.see-more {
-                        position: absolute;
-                        bottom: 20px;
-                        right: 105px;
-                        border-radius: 50px;
-                        background: $background-gradient-indigo;
-                    }
-                    
-                    h3 {
-                        margin: 0;
-                        font-size: xx-large;
-                        text-align: center;
-                        padding: 20px 0;
-                    }
-                    
-                    hr {
-                        width: 10%;
-                        margin: 0 auto;
-                        height: 2px;
-                        background-color: color("amber", "darken-3");
-                        border: none;
-                        transition: all 0.3s;
-                    }
-
-                    td {
-                        padding: 15px 10px;
-
-                        img {
-                            display: inline-block;
-                            height: 23px;
-                            vertical-align: middle;
-                            width: 23px;
-                            margin: 0 !important;
-                        }
-                    }
-
-                    &.open {
-                        max-height: none;
-                    }
-                    
-                    &:hover hr {
-                        width: 40%;
-                    }
-                }
-            }
-        }
-    }
-
-    .waves-effect {
-        &.waves-indigo .waves-ripple {
-            background-color: rgba(color("indigo", "base"), 0.7);
-        }
-    
-        &.waves-cyan .waves-ripple {
-            background-color: rgba(color("cyan", "base"), 0.7);
-        }
-    
-        &.waves-lime .waves-ripple {
-            background-color: rgba(color("lime", "base"), 0.7);
-        }
-    
-        &.waves-amber .waves-ripple {
-            background-color: rgba(color("amber", "base"), 0.7);
-        }
-    }
 }
 
-.hidden {
-    display: none !important;
+body header {
+    top: 0;
+    width: 69.75px;
+    height: 95px;
+    overflow: hidden;
+    position: fixed;
+    padding: 20px 20px 20px 20px;
+    margin: 25px 25px;
+    background-color: #fff;
+    transition: all .25s;
+}
+
+body header:hover {
+    width: 510px;
+}
+
+body header img.logo {
+    height: 55px;
+    float: left;
+}
+
+body header ul {
+    padding-left: 15px !important;
+}
+
+body header ul,
+body header ul li {
+    margin: 0;
+    float: left;
+}
+
+body header ul li a {
+    height: 55px;
+    display: block;
+    padding: 0 15px;
+    line-height: 55px;
+    font-size: 1.1rem;
+    color: #3f51b5;
+}
+
+body header ul li a.home:hover,
+body header ul li a.active.home {
+    color: #3f51b5 !important;
+}
+
+body header ul li a.sobre:hover,
+body header ul li a.active.sobre {
+    color: #00bcd4 !important;
+}
+
+body header ul li a.contato:hover,
+body header ul li a.active.contato {
+    color: #cddc39 !important;
+}
+
+body header ul li a.trabalhos:hover,
+body header ul li a.active.trabalhos {
+    color: #ffc107 !important;
+}
+
+body header ul li a.active,
+body header ul li a:hover {
+    font-weight: bold;
+}
+
+body#home article {
+    margin: 0;
+}
+
+body#home article section.info h1 {
+    margin: 30px 30px 0 0;
+    text-align: right;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #ff8f00;
+}
+
+body#home article section.info p.role {
+    text-align: right;
+    padding-right: 30px;
+    font-size: 1.5rem;
+    color: #00838f;
+    margin: 10px 0 0;
+}
+
+body#home article section.info blockquote {
+    border: none;
+    padding: 0 60px 0 0;
+    text-align: right;
+    font-style: italic;
+    margin: 40px 0;
+}
+
+body#home article section.info strong {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    color: #283593;
+    margin-top: 10px;
+}
+
+body#home article section.info p.resume {
+    text-align: right;
+    padding: 0 30px 0 200px;
+    font-size: 1.2rem;
+}
+
+body#home article section.academic h3 {
+    padding: 0 0 0 30px;
+    color: #827717;
+}
+
+body#home article section.exp h3 {
+    text-align: right;
+    padding: 0 30px 0 0;
+    color: #827717;
+}
+
+body#home article section.academic div {
+    padding: 20px 0 20px 30px;
+}
+
+body#home article section.exp div {
+    text-align: right;
+    padding: 20px 50px 20px 0;
+}
+
+body#home article section.exp div h5,
+body#home article section.exp div p.role,
+body#home article section.academic div h5,
+body#home article section.academic div p.role {
+    margin: 0;
+}
+
+body#home article section.academic hr {
+    border: none;
+    height: 5px;
+    border-radius: 62px;
+    width: 120px;
+    position: relative;
+    margin: 0 0 0 30px;
+}
+
+body#home article section.exp hr {
+    border: none;
+    height: 5px;
+    border-radius: 62px;
+    width: 120px;
+    position: relative;
+    margin: 0 50px 0 calc(100% - 170px);
+}
+
+body#home aside.sidebar {
+    padding: 0;
+}
+
+body#home aside.sidebar section.picture img {
+    max-width: 100%;
+    display: block;
+}
+
+body#home aside.sidebar section.contact ul {
+    margin: 0;
+}
+
+body#home aside.sidebar section.contact ul li a {
+    padding: 15px;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    display: block;
+}
+
+body#home aside.sidebar section.contact ul li a:hover {
+    background-color: #ffffff !important;
+    padding: 20px 15px;
+}
+
+body#home article section hr.indigo,
+body#home aside.sidebar section.contact ul li.indigo {
+    background: linear-gradient(65deg, #3f51b5, #1a237e);
+}
+
+body#home aside.sidebar section.contact ul li.indigo a:hover p {
+    color: #283593;
+}
+
+body#home article section hr.cyan,
+body#home aside.sidebar section.contact ul li.cyan {
+    background: linear-gradient(65deg, #00bcd4, #006064);
+}
+
+body#home aside.sidebar section.contact ul li.cyan a:hover p {
+    color: #00838f;
+}
+
+body#home article section hr.lime,
+body#home aside.sidebar section.contact ul li.lime {
+    background: linear-gradient(65deg, #cddc39, #827717);
+}
+
+body#home aside.sidebar section.contact ul li.lime a:hover p {
+    color: #9e9d24;
+}
+
+body#home article section hr.amber,
+body#home aside.sidebar section.contact ul li.amber {
+    background: linear-gradient(65deg, #ffc107, #ff6f00);
+}
+
+body#home aside.sidebar section.contact ul li.amber a:hover p {
+    color: #ff8f00;
+}
+
+body#home aside.sidebar section.contact ul li p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    color: #ffffff;
+}
+
+body#home aside.sidebar section.contact ul li img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 2rem;
+}
+
+body#home aside.sidebar section.skills.open {
+    max-height: none;
+}
+
+body#home aside.sidebar section.skills {
+    max-height: 347px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+}
+
+body#home aside.sidebar section.skills a.see-more {
+    position: absolute;
+    bottom: 20px;
+    right: 105px;
+    border-radius: 50px;
+    background: linear-gradient(65deg, #3f51b5, #1a237e);
+}
+
+body#home aside.sidebar section.skills h3 {
+    margin: 0;
+    font-size: xx-large;
+    text-align: center;
+    padding: 20px 0;
+}
+
+body#home aside.sidebar section.skills hr {
+    width: 10%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: #ff8f00;
+    border: none;
+    transition: all 0.3s;
+}
+
+body#home aside.sidebar section.skills:hover hr {
+    width: 40%;
+}
+
+body#home aside.sidebar section.skills td {
+    padding: 15px 10px;
+}
+
+body#home aside.sidebar section.skills td img {
+    display: inline-block;
+    height: 23px;
+    vertical-align: middle;
+    width: 23px;
+    margin: 0 !important;
 }
